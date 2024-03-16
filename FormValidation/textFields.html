@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Text Fields</title>
+  <script>
+    function validate(){
+      var email = document.myform.email.value;
+      var password = document.myform.password.value;
+
+      if(email ==""){
+        alert("Email is mandatry");
+        document.myform.email.focus();
+        return false;
+      }
+      else if (password ==""){
+        alert("Password is mandatry");
+        document.myform.email.focus();
+        return false;
+      }
+      else{
+        alert("Validation Successfully");
+        return true;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>User Registration</h3>
+  <form name="myform" action="registration.jsp" onSubmit="return validate()">
+    Email: <input type="text" name="email">
+    Password: <input type="password" name="password">
+    <input type="submit" value="register">
+  </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onchange</title>
+  <script>
+    function handleOnChangeEven(x){
+      document.bgColor = x;
+    }
+
+  </script>
+</head>
+<body>
+  <select onchange="handleOnChangeEven(this.value)">
+    <option value="">Select a color</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">yellow</option>
+    <option value="brown">brown</option>
+    <option value="gray">gray</option>
+    <option value="pink">pink</option>
+  </select>
+</body>
+</html>

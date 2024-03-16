@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation select menu</title>
+  <script>
+    function validate(){
+      var valid = false;
+
+      if(document.getElementById("javascript").checked){
+        return true;
+      }
+      else if(document.getElementById("jqury").checked){
+        return true;
+      }
+      else if(document.getElementById("angulajs").checked){
+        return true;
+      }
+      else if(document.getElementById("nodejs").checked){
+        return true;
+      }
+      
+      if(valid){
+        alert("Validation Successful!");
+      }
+      else{
+        alert("Please select at least one technology");
+        return false;
+      }
+
+      
+    }
+  </script>
+</head>
+<body>
+  <h3>Select a technology:</h3>
+  <form name="myform" action="dropdown.php" onsubmit="return validate()">
+    <input type="checkbox" value="JavaScript" id="javascript">JavaScript
+    <input type="checkbox" value="Jqury" id="jqury">Jqury
+    <input type="checkbox" value="Angulajs" id="angulajs">Angulajs
+    <input type="checkbox" value="Nodejs" id="nodejs">Nodejs
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>

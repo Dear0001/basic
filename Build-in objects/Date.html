@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date</title>
+  <script>
+    function displayDate(){
+      var d = new Date();
+      //var x = d.toLocaleTimeString();
+      //var x = d.toLocaDateString();
+      var x = d.toLocaleString();
+      document.getElementById("date-info").innerHTML = x;
+    }
+  </script>
+</head>
+<body onload="displayDate(this)">
+  Current Date: <br>
+  <p id="date-info"></p>
+</body>
+</html>

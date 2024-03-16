@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Object Creation Using Function</title>
+  <script>
+    function blogPost(title,text){
+      this.title = title;
+      this.text = text;
+      this.addCategory = addCategory;
+      this.displayBlogPost = displayBlogPost;
+    }
+    function addCategory(category){
+      this.category = category;
+    }
+
+    function displayBlogPost(){
+      document.write(blogPost1.title,"<br>");
+      document.write(blogPost1.text,"<br>");
+      document.write(blogPost1.category,"<br>");
+    }
+
+    var blogPost1 = new blogPost("JQury","Makes JS easier to use");
+    blogPost1.addCategory("UI Technology");
+    blogPost1.displayBlogPost();
+
+    var blogPost2 = new blogPost("AngulaJS","To Build Single Page Apps!!");
+    blogPost2.addCategory("Advanced UI Technology");
+    blogPost2.displayBlogPost();
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

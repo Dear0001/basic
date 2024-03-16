@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>onChange</title>
+        <script>
+            function onKeyDown(x){
+                x.style.color = "red";
+                x.style.backgroundColor = "blue";
+            }
+
+            function onKeyUp(x){
+                x.style.color = "green";
+                x.style.backgroundColor = "yellow";
+            }
+
+            function KeyPress(x){
+                x.style.color = "white";
+                x.style.backgroundColor = "black";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" onkeydown="onKeyDown(this)" onkeyup="onKeyUp(this)" keypress="onKeyPress(this)"/>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Interval Method</title>
+  <script>
+    function continuousDisplay(){
+      //setTimeout: once
+      setInterval(displayDate, 1000);
+      //clear interval
+    }
+    function displayDate(){
+      var d = new Date();
+      //var x = d.toLocaleTimeString();
+      //var x = d.toLocaDateString();
+      var x = d.toLocaleString();
+      document.getElementById("date-info").innerHTML = x;
+    }
+  </script>
+</head>
+<body onload="continuousDisplay()">
+  Current Date: <br>
+  <p id="date-info"></p>
+</body>
+</html>

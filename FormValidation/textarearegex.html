@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text fields validation using regex</title>
+  <script>
+    function validate(){
+      var expression = /^[A-Za-z0-9\s]+$/;
+      var address = document.myform.address.value;
+      var result = expression.test(address);
+
+      if(result){
+        alert("Validation Successful");
+      }else{
+        document.getElementById("error").innerHTML = "Please enter a alpha numeric values only";
+        document.myform.address.focus();
+        return false;
+      }
+      
+    }
+  </script>
+</head>
+<body>
+  <h3>Select a technology:</h3>
+  <form name="myform" action="dropdown.php" onsubmit="return validate()">
+    Address: <textarea name="address"></textarea><br>
+    <b id="error"></b><br>
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>

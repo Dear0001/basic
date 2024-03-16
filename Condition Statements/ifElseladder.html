@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IF</title>
+  <script>
+    var javascriptmark = parseInt(prompt("Please enter the JS Mark"));
+    var javamark = parseInt(prompt("Please enter the  Mark"));
+    var donetmark = parseInt(prompt("Please enter the >Net Mark"));
+     
+    var total = javascriptmark+javamark +donetmark;
+    document.write("Total Mask: "+total+"<br>");
+    var average = total / 3;
+    document.write("Average: "+average+"<br>");
+
+    if(javascriptmark>=35 && javamark>=35 && donetmark>=35)
+    {
+      document.write("Result: Passed"+"<br>");
+      if(average>=35 && average<60){
+        document.write("Grade: C");
+      }
+      else if(average>=60 && average<70){
+        document.write("Grade: B"+"<br>");
+      }
+      else{
+        document.write("Grade: A"+"<br>");
+      }
+    }
+    else{
+      document.write("Result: Failed"+"<br>");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

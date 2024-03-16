@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>HTML DOM assignment solution</title>
+        <script>
+            function handleaddbtn(){
+                var divbox = document.getElementById("parent-div");
+                var parabox = document.createElement("p");
+                var tvbox = document.createTextNode("Television - 500$");
+                parabox.appendChild(tvbox);
+                divbox.appendChild(parabox);
+            }
+            function handleremovebtn(){
+                var divbox = document.getElementById("parent-div");
+                var parabox = document.getElementById("para-cellphone");
+                divbox.removeChild(parabox);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Product Details</h1>
+        <div id="parent-div">
+            <p id="para-cellphone">Cellphone - 300$</p>
+            <p id="para-laptop">Laptop - 1000$</p>
+        </div>
+        <input type="button" value="Add: Television" id="add-btn" onclick="handleaddbtn()">
+        <input type="button" value="Remove: Cellphone" id="remove-btn" onclick="handleremovebtn()">
+    </body>
+</html>
